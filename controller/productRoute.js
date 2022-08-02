@@ -34,7 +34,6 @@ const getAllProduct = async(req,res) => {
             const [field,operator,value] = item.split('-');
             if(options.includes(field)) {
             objecctQuery[field] = {[operator]: Number(value)}
-            console.log(objecctQuery[field]);
             }
         })
     }

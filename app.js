@@ -1,5 +1,6 @@
 const express = require('express');
 require('express-async-errors');
+const path = require('path');
 const app = express();
 const dbConnect = require('./db/mongoose');
 const product = require('./routers/route');
@@ -24,7 +25,9 @@ app.use(helmet());
 app.use(cors());
 app.use(xssClean());
 
-app.get('/', (req,res)=> {res.send('<h1>Create Read Update & Delete API with NodeJS and MongoDB</h1><h3>Api URL is "api/v1/product"</h3')});
+app.get('/', (req,res)=> {
+  res.sendFile(path.join(__dirname, '/index.html'));
+});
 
 // Router
 const PORT =  process.env.PORT || 5000;

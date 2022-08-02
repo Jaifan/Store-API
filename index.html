@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>
+            CRUD API
+        </title>
+    </head>
+    <body>
+        <h2>Create Read Update & Delete API with NodeJS and MongoDB</h2>
+        <h3>This is an Index Page for api please visit : <a href="api/v1/product">"api/v1/product/"</a></h3>
+        <h3>With "api/v1/product/" -> get & create methods works</h3>
+        <h3>with "api/v1/product/:id" get,update & delete methods works</h3>
+
+        <h3>Object Schema is like{
+            "name": "Tablet",
+            "featured": true,
+            "price": 50,    
+            "rating": 4.3,
+            "company": "apple"
+        }</h3>
+
+        <br/>
+        <h3>Some Query examle link :</h3>
+        <h4><a href="api/v1/product?name=la">"api/v1/product?name=la"</a> It filters product which name start with "la"</h4>
+        <h4><a href="api/v1/product?numericFilters=rating%3E4.0,price%3E=90">"api/v1/product?numericFilters=rating>4.0,price>=90"</a> It filters product which price grater than or equal 90 And Rating grater than 4.0</h4>
+        <h4><a href="api/v1/product?fields=name,price">"api/v1/product?fields=name,price"</a> It shows one name & price element of each object</h4>
+        <h4><a href="api/v1/product?sort=-price">"api/v1/product?sort=-price"</a> It sort the list price decending order</h4>
+        <h4><a href="api/v1/product?limit=5&page=3">"api/v1/product?limit=5&page=3"</a> It shows 11 to 15 obejct list . Because Each page contain 5 element And page No 3. </h4>
+        <h4><a href="api/v1/product?fields=name,price,company&company=vivo&sort=-price&limit=2&page=2">"api/v1/product?fields=name,price,company&company=vivo&sort=-price&limit=2&page=2"</a> Multiple Query at a same time</h4>
+        <h4><a href="api/v1/product/62dae43bb5b7d7167b83c48f">"api/v1/product/62dae43bb5b7d7167b83c48f"</a> for single object select where you can perform delete & update with request.body by postman</h4>
+
+        <br/>
+        <h5>API owner : Jafran Bin Zakaria <br/>
+            Github : Jaifan <br/>
+            Email : jafranbinzakaria@gmail.com
+        </h5>
+    </body>
+</html>
