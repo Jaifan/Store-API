@@ -24,6 +24,8 @@ app.use(helmet());
 app.use(cors());
 app.use(xssClean());
 
+app.get('/', (req,res)=> {res.send('<h1>Create Read Update & Delete API with NodeJS and MongoDB</h1><h3>Api URL is "api/v1/product"</h3')});
+
 // Router
 const PORT =  process.env.PORT || 5000;
 app.use('/api/v1/product', product);
